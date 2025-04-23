@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fake new Detector"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter some text"
+        android:layout_below="@id/title"
+        android:layout_margin="20dp"
+        android:background="@android:drawable/edit_text"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/selectImageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Image from Gallery"
+        android:layout_below="@id/inputText"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/processBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Process"
+        android:layout_below="@id/selectImageBtn"
+        android:layout_margin="20dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="#fff" />
+
+    <ProgressBar
+        android:id="@+id/loader"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/processBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/loader"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@id/imagePreview"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textColor="#222"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
